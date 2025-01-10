@@ -160,6 +160,7 @@ function createOverlay() {
   document.body.appendChild(overlayDiv);
   overlayDiv.addEventListener("click", () => {
     document.body.removeChild(overlayDiv);
+    v1Callbacks.canceled();
   });
   return overlayDiv;
 }
