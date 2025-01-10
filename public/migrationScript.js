@@ -925,6 +925,7 @@ class HeaderComponent extends HTMLElement {
     const closeButton = shadow.querySelector(".close-btn");
     closeButton.addEventListener("click", () => {
       console.log("closed");
+      v1Callbacks.canceled();
       const overlay = document.getElementById("sdkOverlay");
       document.body.removeChild(overlay);
     });
