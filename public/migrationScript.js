@@ -158,10 +158,6 @@ function createOverlay() {
   overlayDiv.style.backgroundColor = "rgba(0, 0, 0, 0.75)";
   overlayDiv.style.zIndex = "999";
   document.body.appendChild(overlayDiv);
-  // overlayDiv.addEventListener("click", () => {
-  //   document.body.removeChild(overlayDiv);
-  //   v1Callbacks.canceled();
-  // });
   return overlayDiv;
 }
 
@@ -225,10 +221,6 @@ async function handleCheckout(srcDigitalCardId) {
             },
           ],
           payloadRequested: "AUTHENTICATED",
-        },
-        authenticationMethod: {
-          authenticationMethodType: "EMAIL_OTP",
-          authenticationSubject: "CARD",
         },
         acquirerBIN: "455555",
         acquirerMerchantId: "12345678",
