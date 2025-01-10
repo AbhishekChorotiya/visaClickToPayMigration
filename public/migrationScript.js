@@ -158,10 +158,10 @@ function createOverlay() {
   overlayDiv.style.backgroundColor = "rgba(0, 0, 0, 0.75)";
   overlayDiv.style.zIndex = "999";
   document.body.appendChild(overlayDiv);
-  overlayDiv.addEventListener("click", () => {
-    document.body.removeChild(overlayDiv);
-    v1Callbacks.canceled();
-  });
+  // overlayDiv.addEventListener("click", () => {
+  //   document.body.removeChild(overlayDiv);
+  //   v1Callbacks.canceled();
+  // });
   return overlayDiv;
 }
 
@@ -314,10 +314,10 @@ const v1CheckoutFuctions = {
       case "payment.success":
         v1Callbacks.success = callback;
         break;
-      case "payment.cancel":
+      case "payment.error":
         v1Callbacks.error = callback;
         break;
-      case "payment.error":
+      case "payment.cancel":
         v1Callbacks.canceled = callback;
         break;
       default:
